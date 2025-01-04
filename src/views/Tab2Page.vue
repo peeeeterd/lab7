@@ -107,28 +107,28 @@ watch(() => dataStore.sharedData, (newData) => {
 });
 
 const calTotalCholesterol = computed(() =>
-  receivedData.value.totalCholesterol < LimitTotalCholesterol.value
-    ? `w normie (< ${LimitTotalCholesterol.value} ${unit.value})`
+  receivedData.value.totalCholesterol <= LimitTotalCholesterol.value
+    ? `w normie (<= ${LimitTotalCholesterol.value} ${unit.value})`
     : `zbyt wysoki.\nNorma przekroczona o ${round(receivedData.value.totalCholesterol - LimitTotalCholesterol.value)} ${unit.value}`
 );
 const calLDL = computed(() =>
-  receivedData.value.LDL < LimitLDL.value
-    ? `w normie (< ${LimitLDL.value} ${unit.value})`
+  receivedData.value.LDL <= LimitLDL.value
+    ? `w normie (<= ${LimitLDL.value} ${unit.value})`
     : `zbyt wysoki.\nNorma przekroczona o ${round(receivedData.value.LDL - LimitLDL.value)} ${unit.value}`
 );
 const calHDLMan = computed(() =>
-receivedData.value.HDL > LimitHDLMan.value
-    ? `w normie (> ${LimitHDLMan.value} ${unit.value})`
+receivedData.value.HDL >= LimitHDLMan.value
+    ? `w normie (>= ${LimitHDLMan.value} ${unit.value})`
     : `zbyt niski.\nNiedobór o ${round(Math.abs(LimitHDLMan.value - receivedData.value.HDL))} ${unit.value}`
 );
 const calHDLWoman = computed(() =>
-receivedData.value.HDL > LimitHDLWoman.value
-    ? `w normie (> ${LimitHDLWoman.value} ${unit.value})`
+receivedData.value.HDL >= LimitHDLWoman.value
+    ? `w normie (>= ${LimitHDLWoman.value} ${unit.value})`
     : `zbyt niski.\nNiedobór o ${round(Math.abs(LimitHDLWoman.value - receivedData.value.HDL))} ${unit.value}`
 );
 const calTriglyceride = computed(() =>
-  receivedData.value.triglyceride < LimitTriglyceride.value
-    ? `w normie (< ${LimitTriglyceride.value} ${unit.value})`
+  receivedData.value.triglyceride <= LimitTriglyceride.value
+    ? `w normie (<= ${LimitTriglyceride.value} ${unit.value})`
     : `zbyt wysoki.\nNorma przekroczona o ${round(receivedData.value.triglyceride - LimitTriglyceride.value)} ${unit.value}`
 );
 

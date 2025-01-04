@@ -104,14 +104,14 @@ const submitForm = () => {
 </script>
 <style>
 .form-item{
-  padding: 3%;
-  padding-right: 7%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 .button{
   padding-left: 5%;
   padding-right: 5%;
 }
 .form-item-input{
-  margin-top: 2%;
+  margin-top: 6%;
 }
 </style>
